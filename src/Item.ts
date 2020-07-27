@@ -1,4 +1,5 @@
 import { IAccess } from './Access';
+import Random from './Random';
 
 export default class Item {
     // Item identifier
@@ -16,4 +17,11 @@ export default class Item {
 
     // Item content
     value: any = null;
+
+    constructor(value: any, permissions: IAccess) {
+        this.hash = Random.randomHex();
+        this.permissions = permissions;
+        this.value = value;
+    }
+
 }
