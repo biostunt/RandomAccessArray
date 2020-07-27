@@ -11,6 +11,9 @@ export default class Item {
         WRITE: false,
         EXECUTE: false
     };
+    throwError(action: string): void {
+        console.error(`Item with hash: ${this.hash}. Message: permission denied. Action: ${action}`);
+    }
 
     //Previous Item element 
     prev: Item = null;
@@ -22,6 +25,19 @@ export default class Item {
         this.hash = Random.randomHex();
         this.permissions = permissions;
         this.value = value;
+    }
+
+    getValue() {
+        if (this.permissions.READ)
+            return this.value;
+        else
+            this.throwError('READ');
+    }
+    setValue(value: any) {
+        if (this.permissions.WRITE)
+            this.value = value;
+        else
+            this.throwError('WRITE');
     }
 
 }

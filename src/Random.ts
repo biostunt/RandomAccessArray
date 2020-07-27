@@ -14,4 +14,8 @@ export default class Random {
     static randomHex(bytes: number = 12): string {
         return this.randomInt(Math.pow(2, Math.floor(bytes / 2)), Math.pow(2, bytes)).toString(16);
     }
+
+    static randomBoolean(): boolean {
+        return this.randomInt(0, 1) === 1;
+    }
 }
