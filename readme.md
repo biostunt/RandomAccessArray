@@ -1,9 +1,13 @@
+
 ## **Random Access Array**
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-*Project by : biostunt*
-*Language: TypeScript, JavaScript*
-*Type: Class*
+
+    *Project by : biostunt*
+
+    *Language: TypeScript, JavaScript*
+
+    *Type: Class*
 
 
 ## Description:
