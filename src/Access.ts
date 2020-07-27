@@ -6,3 +6,7 @@ export interface IAccess {
     WRITE: boolean;
     EXECUTE: boolean;
 }
+
+export function createAccessConfiguration(READ: boolean = false, WRITE: boolean = false, EXECUTE: boolean = false): IAccess {
+    return { READ, WRITE, EXECUTE };
+}

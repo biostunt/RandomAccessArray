@@ -8,8 +8,12 @@ export default class RAArray {
     head: Item = null;
     tail: Item = null;
 
-    constructor(access: string = 'rwx') {
+    init(): void {
 
+    }
+
+    constructor() {
+        this.init();
     }
 
 }
