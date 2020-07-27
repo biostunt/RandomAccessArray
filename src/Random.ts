@@ -7,7 +7,7 @@ export default class Random {
         return Math.floor(this.randomFloat(min, max));
     }
 
-    static randomString(dict: string = "1234567890qwertyuiopasdfghjklzxcvbnm", length: number = 10): string {
+    static randomString(length: number = 10, dict: string = "1234567890qwertyuiopasdfghjklzxcvbnm"): string {
         return new Array<string>(length).map(i => dict.charAt(this.randomInt(0, dict.length))).join('');
     }
 
